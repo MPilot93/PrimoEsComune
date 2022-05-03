@@ -11,14 +11,17 @@ namespace EsComune
     {
 
         private readonly List<Spedizione> Carico;
-        private string Nome;
+        private string IdCorriere;
         public Corriere(string nome)
         {
-            Nome = nome;
+            IdCorriere = nome;
             Carico = new List<Spedizione>();
 
         }
-        public void AddSpedizione(Spedizione spedizione) { Carico.Add(spedizione); }
+        public void AddSpedizione(Spedizione spedizione) 
+        { 
+            Carico.Add(spedizione); 
+        }
 
         public double GetTotalIngombro()
         {
@@ -30,9 +33,9 @@ namespace EsComune
 
         public string GetSpedizioni()
         {
-            string result = $"spedizioni affidate ad: {Nome}";
+            string result = $"spedizioni affidate ad: {IdCorriere}" +"\n";
             foreach (var item in Carico)
-                result = string.Concat(result, item.GetSpedizioni());
+                result = string.Concat(result, item.GetSpedizioni() +"\n");
             return result;
         }
     }

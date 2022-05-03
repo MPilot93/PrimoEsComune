@@ -29,7 +29,7 @@
 
         public string GetSpedizioni()
         {
-            return $"Mittente: {mittente} , Destinatario: {destinatario} , Valore: {valore} , Ingombro: {printIngombro()}";
+            return $"Mittente: {mittente} / Destinatario: {destinatario} / Valore: {valore} / Ingombro totale: {printIngombro()}";
         }
     }
 }
