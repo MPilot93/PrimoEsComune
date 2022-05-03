@@ -11,4 +11,13 @@ corriere1.AddSpedizione(posta);
 
 Console.WriteLine("lista spedizione corriere1 " + "\n");
 Console.WriteLine(corriere1.GetSpedizioni() + "\n");
-Console.WriteLine($"per un totale ingombro di {corriere1.GetTotalIngombro()}");
+Console.WriteLine($"per un totale ingombro di {corriere1.GetTotalIngombro()}" + "\n");
+
+Console.WriteLine("i pacchi confrontati sono uguali?" + "\n");
+
+if (multa.Equals(posta))
+{
+    Console.WriteLine("Si, sono uguali");
+}
+
+else Console.WriteLine("No, non sono uguali");

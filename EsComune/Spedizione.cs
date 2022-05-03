@@ -18,7 +18,7 @@
         public abstract double printIngombro();
 
 
-        //secondo metodo astratto
+        //secondo metodo 
         public  bool Equal(Spedizione other)
         {
             return other.mittente==(mittente) 
