@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EsComune
 
 {
     public class Corriere
     {
-        //proprietà
-        private readonly List<Spedizione> Carico;
-        private string IdCorriere;
 
-        //costruttore
+        private readonly List<Spedizione> Carico;
+        private readonly string IdCorriere;
+
+      
         public Corriere(string nome)
         {
             IdCorriere = nome;
@@ -21,7 +17,6 @@ namespace EsComune
 
         }
 
-        //metodi classe
         public void AddSpedizione(Spedizione spedizione) 
         { 
             Carico.Add(spedizione); 
@@ -37,9 +32,9 @@ namespace EsComune
 
         public string GetSpedizioni()
         {
-            string result = $"spedizioni affidate ad: {IdCorriere}" +"\n";
+            string result = string.Concat($"spedizioni affidate ad: {IdCorriere}" , Environment.NewLine);
             foreach (var item in Carico)
-                result = string.Concat(result, item.GetSpedizioni() +"\n");
+                result = string.Concat(result, item.GetSpedizioni() + Environment.NewLine);
             return result;
         }
     }
