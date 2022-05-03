@@ -8,10 +8,11 @@ namespace EsComune
 {
     public class Pacco : Spedizione
     {
+        //proprietà
         private readonly double Altezza;
         private readonly double Lunghezza;
         private readonly double Profondita;
-
+        //costruttore
         public Pacco (string mittente, string destinatario, decimal valore, double altezza, double lunghezza, double profondita ) 
             : base(mittente, destinatario, valore) 
         {
@@ -19,7 +20,7 @@ namespace EsComune
             Lunghezza=lunghezza;
             Profondita=profondita;
         }
-      
+      //implemento metodo
         public override double printIngombro() => Altezza * Lunghezza * Profondita;
       
     }

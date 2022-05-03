@@ -9,15 +9,19 @@ namespace EsComune
 {
     public class Corriere
     {
-
+        //proprietà
         private readonly List<Spedizione> Carico;
         private string IdCorriere;
+
+        //costruttore
         public Corriere(string nome)
         {
             IdCorriere = nome;
             Carico = new List<Spedizione>();
 
         }
+
+        //metodi classe
         public void AddSpedizione(Spedizione spedizione) 
         { 
             Carico.Add(spedizione); 
